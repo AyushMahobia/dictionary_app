@@ -11,8 +11,8 @@ const App = () => {
   const [phonetic, setPhonetic] = useState("");
   const [title, setTitle] = useState(false);
 
-  const fetchInformation = async () => {
-    const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${search}`;
+  const fetchInformation = async (link) => {
+    const url = link;
     try {
       const fetchData = await fetch(url);
       const data = await fetchData.json();
@@ -28,7 +28,8 @@ const App = () => {
   }
 
   useEffect(() => {
-    fetchInformation();
+    const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${search}`;
+    fetchInformation(url);
   }, [search])
 
   function handleSearch() {
