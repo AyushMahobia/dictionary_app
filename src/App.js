@@ -41,7 +41,7 @@ const App = () => {
   }
   return (
     <>
-      <h1>!!! Dictionary !!!</h1>
+      <h1>!!! Ricerca !!!</h1>
       <div className='background'>
         <div className='dictionary-box'>
           <div className="search-box">
